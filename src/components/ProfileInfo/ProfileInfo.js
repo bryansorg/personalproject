@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-// import reducer from "../../ducks/reducer";
+import reducer from "../../ducks/reducer";
+import { submitForm } from "../../ducks/reducer";
+import styleSheet from "../ProfileInfo/profileInfo.css";
 
 class ProfileInfo extends Component {
   constructor() {
@@ -135,11 +137,25 @@ class ProfileInfo extends Component {
             this.handleCompanyBio(e);
           }}
         />
+        <button
+          onClick={() => {
+            submitForm(
+              this.state.isEmployer,
+              this.state.isJobSeeker,
+              this.state.firstName,
+              this.state.lastName,
+              this.state.email,
+              this.state.companyBio,
+              this.state.companyName
+            );
+          }}
+        >
+          Submit!
+        </button>
       </div>
     );
   }
   render() {
-    console.log(this.state);
     {
       if (this.state.isEmployer === true) {
         return this.isCompany();
@@ -190,6 +206,21 @@ class ProfileInfo extends Component {
             this.handleBio(e);
           }}
         />
+        <button
+          onClick={() => {
+            submitForm(
+              this.state.isEmployer,
+              this.state.isJobSeeker,
+              this.state.firstName,
+              this.state.lastName,
+              this.state.email,
+              this.state.bio,
+              this.state.companyName
+            );
+          }}
+        >
+          Submit!
+        </button>
       </div>
     );
   }

@@ -68,5 +68,5 @@ app.get(
 );
 
 app.get("/api/users", mc.getUsers);
-
+app.post("/api/profile", mc.sendProfile);
 app.listen(port, console.log(`listening on port #${port}`));
