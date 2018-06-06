@@ -4,9 +4,11 @@ header {
   align-items: center;
 }
 h1 {
-  font-size: 6em;
   margin-top: 5vh;
 }
+img {
+  height: 40vh;
+}
 button {
-  margin-top: 30vh;
+  margin-top: 10vh;
 }

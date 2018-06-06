@@ -1,14 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Landing() {
   return (
     <div>
       <header>
-        <h1>Logo</h1>
-        <Link to="/Login">
+        <h1>
+          {" "}
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" />
+        </h1>
+        <a href="http://localhost:3001/login">
           <button> Log in/Sign up </button>
-        </Link>
+        </a>
       </header>
     </div>
   );
